@@ -203,6 +203,54 @@
         color: var(--text);
       }
 
+      .couple-grid {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+        margin-top: 32px;
+      }
+
+      .couple-col {
+        flex: 1;
+        text-align: center;
+      }
+
+      .couple-role {
+        font-size: 1.2rem;
+        color: var(--muted);
+        letter-spacing: 0.12em;
+        margin-bottom: 4px;
+      }
+
+      .couple-name {
+        font-size: 1.98rem;
+        color: var(--text);
+        letter-spacing: 0.12em;
+        margin-bottom: 20px;
+      }
+
+      .couple-parent-role {
+        font-size: 1.2rem;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+      }
+
+      .couple-parents {
+        font-size: 1.3rem;
+        color: var(--text);
+        letter-spacing: 0.08em;
+        line-height: 1.8;
+      }
+
+      .couple-divider {
+        width: 1px;
+        background: rgba(0, 0, 0, 0.12);
+        align-self: stretch;
+        margin: 0 20px;
+      }
+
       /* ─── Quote ─── */
       .quote-block {
         padding: 36px 36px 0;
@@ -237,7 +285,6 @@
         bottom: -18px;
         font-size: 5.2rem;
       }
-
 
       /* ─── Yes I Do ─── */
       .yes-section {
@@ -541,7 +588,26 @@
       <section class="couple-intro reveal">
         <p class="sub">誠摯邀請你的到來</p>
         <span class="script title-script">Wedding</span>
-        <p class="names">許啓邦 &amp; 林羽緁</p>
+
+        <div class="couple-grid">
+          <!-- 新郎 -->
+          <div class="couple-col">
+            <p class="couple-role">新郎</p>
+            <p class="couple-name">許啓邦</p>
+            <p class="couple-parent-role">男方家長</p>
+            <p class="couple-parents">許志昇　李桂媛</p>
+          </div>
+
+          <div class="couple-divider"></div>
+
+          <!-- 新娘 -->
+          <div class="couple-col">
+            <p class="couple-role">新娘</p>
+            <p class="couple-name">林羽緁</p>
+            <p class="couple-parent-role">女方家長</p>
+            <p class="couple-parents">孫丙午　劉瓊瑛</p>
+          </div>
+        </div>
       </section>
 
       <!-- ══════ PHOTO 1 ══════ -->
@@ -573,7 +639,6 @@
           </p>
         </div>
       </div>
-
 
       <!-- ══════ LOVE POEM ══════ -->
       <div style="padding: 44px 28px 52px">
