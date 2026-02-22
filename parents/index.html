@@ -654,6 +654,30 @@
         opacity: 0.82;
       }
 
+      /* ─── Music toggle ─── */
+      .music-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 999;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(125, 26, 26, 0.25);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        transition: opacity 0.3s;
+      }
+
+      .music-btn:hover {
+        opacity: 0.75;
+      }
+
       /* ─── Footer ─── */
       .footer {
         text-align: center;
@@ -672,24 +696,8 @@
   <body>
     <div class="page">
       <!-- ══════ BACKGROUND MUSIC ══════ -->
-      <div style="position: absolute; width: 0; height: 0; overflow: hidden">
-        <iframe
-          src="https://www.youtube.com/embed/9_068Ekk_fs?si=PzJzBxs9ccgPSIfl&autoplay=1&loop=1&playlist=9_068Ekk_fs"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <audio id="bg-audio" src="../assets/tianqiqinglang.mp3" loop preload="auto"></audio>
+      <button class="music-btn" id="music-btn" aria-label="播放音樂">♪</button>
 
       <!-- ══════ HERO ══════ -->
       <section class="hero">
@@ -1200,6 +1208,23 @@
       setTimeout(() => {
         document.documentElement.classList.remove("jf-loading");
       }, 4000);
+
+      // ── Background music ──
+      const audio = document.getElementById("bg-audio");
+      const musicBtn = document.getElementById("music-btn");
+      let playing = false;
+
+      musicBtn.addEventListener("click", () => {
+        if (playing) {
+          audio.pause();
+          musicBtn.textContent = "♪";
+          playing = false;
+        } else {
+          audio.play().catch(() => {});
+          musicBtn.textContent = "♩";
+          playing = true;
+        }
+      });
     </script>
   </body>
 </html>
