@@ -118,37 +118,21 @@
       .hero-bg {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          175deg,
-          #1c1c1c 0%,
-          #2e2e2e 55%,
-          #181818 100%
-        );
+        background-image: url("assets/S__27402248.jpg");
+        background-size: cover;
+        background-position: center top;
       }
 
       .hero-bg::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(
-          ellipse 70% 60% at 55% 38%,
-          rgba(255, 255, 255, 0.06) 0%,
-          transparent 70%
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.25) 0%,
+          rgba(0, 0, 0, 0.15) 50%,
+          rgba(0, 0, 0, 0.45) 100%
         );
-      }
-
-      .hero-badge {
-        position: absolute;
-        top: 44px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 2;
-      }
-
-      .hero-badge .serif-caps {
-        color: rgba(255, 255, 255, 0.72);
-        letter-spacing: 0.32em;
       }
 
       .hero-invite {
@@ -162,7 +146,7 @@
       }
 
       .hero-invite p {
-        font-size: 1.35rem;
+        font-size: 1.85rem;
         color: rgba(255, 255, 255, 0.8);
         letter-spacing: 0.1em;
       }
@@ -182,13 +166,6 @@
       .couple-intro {
         text-align: center;
         padding: 60px 28px 52px;
-      }
-
-      .couple-intro .sub {
-        font-size: 1.32rem;
-        color: var(--muted);
-        letter-spacing: 0.07em;
-        margin-bottom: 18px;
       }
 
       .couple-intro .title-script {
@@ -544,41 +521,6 @@
       <!-- ══════ HERO ══════ -->
       <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-badge">
-          <span class="serif-caps">Wedding Invitation</span>
-        </div>
-        <!-- decorative veil lines -->
-        <svg
-          style="
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.07;
-            pointer-events: none;
-          "
-          preserveAspectRatio="none"
-          viewBox="0 0 480 900"
-        >
-          <path
-            d="M280 0 Q320 200 260 400 Q200 600 240 900"
-            stroke="white"
-            stroke-width="1"
-            fill="none"
-          />
-          <path
-            d="M320 0 Q360 180 300 380 Q240 580 280 900"
-            stroke="white"
-            stroke-width="0.6"
-            fill="none"
-          />
-          <path
-            d="M200 0 Q240 220 200 420 Q160 620 200 900"
-            stroke="white"
-            stroke-width="0.8"
-            fill="none"
-          />
-        </svg>
         <div class="hero-invite">
           <p>誠摯邀請你的到來</p>
         </div>
@@ -586,7 +528,6 @@
 
       <!-- ══════ COUPLE INTRO ══════ -->
       <section class="couple-intro reveal">
-        <p class="sub">誠摯邀請你的到來</p>
         <span class="script title-script">Wedding</span>
 
         <div class="couple-grid">
@@ -626,17 +567,6 @@
         <div class="greeting-wrap reveal-fade">
           <div class="photo" style="width: 100%; aspect-ratio: 3/4"></div>
           <span class="script hi">Hi.</span>
-        </div>
-        <div style="padding: 52px 28px 48px">
-          <p class="poem reveal">
-            夏風溫柔，落日鑲金<br />
-            從相遇的怦然心動<br />
-            到未來的篤定攜手<br />
-            我們決定在夏日的晚風中<br />
-            寫下屬於我們的第一頁<br />
-            旦逢良辰，順頌時宜<br />
-            我們期待和您的重逢
-          </p>
         </div>
       </div>
 
@@ -991,7 +921,7 @@
         <!-- Venue -->
         <p
           style="
-            font-size: 0.72rem;
+            font-size: 1.08rem;
             color: var(--muted);
             letter-spacing: 0.12em;
             margin: 28px 0 12px;
