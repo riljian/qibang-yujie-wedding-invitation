@@ -187,6 +187,11 @@
         margin: 0 auto;
         background: var(--bg);
         overflow: hidden;
+        transition: opacity 0.4s ease;
+      }
+
+      html.jf-loading .page {
+        opacity: 0;
       }
 
       /* ─── Typography ─── */
@@ -1210,6 +1215,11 @@
       document
         .querySelectorAll(".reveal, .reveal-fade")
         .forEach((el) => io.observe(el));
+
+      // ── Font load fallback（justfont 失敗時仍顯示頁面）──
+      setTimeout(() => {
+        document.documentElement.classList.remove("jf-loading");
+      }, 4000);
     </script>
   </body>
 </html>
